@@ -7,6 +7,7 @@ A simple QA search engine built using elasticsearch and universal sentence encod
 #### Pre-requisites
 
 * Elasticsearch [7.0+]
+* Python [3.5+]
 
 
 #### Installing dependencies
