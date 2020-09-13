@@ -93,6 +93,8 @@ def semantic_search(query_vec, thresh=1.2, top_n=10):
 
 def keyword_search(query, thresh=1.2, top_n=10):
     # Retrieve top_n records using TF-IDF scoring for the given query vector
+    if not es_conn.indices.exists("covid-qa"):
+        return "No records found"
     k_body = {
         "query": {
             "match": {

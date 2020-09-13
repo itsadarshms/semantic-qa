@@ -1,0 +1,6 @@
+numpy~=1.17.4
+tqdm~=4.46.1
+Flask~=1.1.2
+pandas~=1.0.5
+elasticsearch~=7.7.1
+tensorflow-hub~=0.8.0
