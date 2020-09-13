@@ -27,6 +27,8 @@ def qa():
         query_vec = np.asarray(model([request.args.get("query")])[0]).tolist()
         # Retrieve the semantically similar records for the query
         records = semantic_search(query_vec, app.config['SEARCH_THRESH'])
+
+        # Retrieve records using keyword search (TF-IDF score)
         # records = keyword_search(request.args.get("query"), app.config['SEARCH_THRESH'])
     else:
         return {"error": "Couldn't process your request"}, 422

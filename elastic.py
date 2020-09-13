@@ -92,6 +92,7 @@ def semantic_search(query_vec, thresh=1.2, top_n=10):
 
 
 def keyword_search(query, thresh=1.2, top_n=10):
+    # Retrieve top_n records using TF-IDF scoring for the given query vector
     k_body = {
         "query": {
             "match": {
@@ -99,6 +100,8 @@ def keyword_search(query, thresh=1.2, top_n=10):
             }
         }
     }
+
+    # Keyword search
     result = es_conn.search(index="covid-qa", body=k_body)
     total_match = len(result["hits"]["hits"])
     print("Total Matches: ", str(total_match))
