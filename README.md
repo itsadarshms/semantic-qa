@@ -9,15 +9,11 @@ A simple QA search engine built using elasticsearch and universal sentence encod
 * Elasticsearch [7.0+]
 
 
-<br>
-
 ### Installing dependencies
 
 ```
 pip install -r requirements.txt
 ```
-
-<br>
 
 ### Indexing the dataset
 
@@ -25,15 +21,11 @@ pip install -r requirements.txt
 python dump_qa.py
 ```
 
-<br>
-
 ### Running the server
 
 ```
 python app.py
 ```
-
-<br>
 
 ### Querying the index
 
